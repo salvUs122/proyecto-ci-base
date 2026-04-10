@@ -33,6 +33,8 @@
   },
   "homepage": "https://github.com/salvUs122/proyecto-ci-base#readme",
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.32.1",
     "eslint": "^10.2.0",
