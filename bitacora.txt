@@ -1,0 +1,48 @@
+BITÁCORA
+
+Autor: salvUs122
+Fecha: 10/04/2026
+Repositorio: https://github.com/salvUs122/proyecto-ci-base
+
+PASO 1 Crear repositorio en GitHub
+Se creó el repositorio proyecto-ci-base en GitHub con README
+
+PASO 2 Clonar repositorio
+ git clone https://github.com/salvUs122/proyecto-ci-base.git
+
+PASO 3 Inicializar proyecto Node.js
+npm init -y
+Se generó package.json automáticamente
+
+PASO 4 Instalar dependencias
+npm install --save-dev eslint prettier eslint-config-prettier eslint-plugin-prettier husky lint-staged
+npm install --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import
+npm install --save-dev jest @eslint/js @eslint/eslintrc
+
+PASO 5 Configurar archivos
+Se creó .prettierrc con reglas de formato de código
+Se creó .eslintrc.json con reglas de estándar de código TypeScript
+Se creó tsconfig.json para configuración de TypeScript
+Se creó eslint.config.js para compatibilidad con ESLint v10
+Se creó .gitignore para excluir node_modules y dist
+
+PASO 6 - Configurar Husky
+npx husky-init && npm install
+Se configuró .husky/pre-commit con lint-staged
+Se configuró .husky/pre-push con npm test
+Husky bloquea commits con errores de lint
+Husky bloquea push si los tests fallan
+
+PASO 7 - Crear test básico
+Se creó src/sum.test.js con Jest
+Test verifica que la función suma retorna resultado correcto
+
+PASO 8 - Configurar GitHub Actions
+Se creó .github/workflows/ci.yml
+Pipeline ejecuta en Node.js 18.x y 20.x
+Pasos: install, audit, format check, lint, tests
+
+RESULTADO FINAL
+CI/CD funcionando correctamente en GitHub Actions
+Status: SUCCESS en ambas versiones de Node.js
+Husky protege el código antes de cada commit y push
